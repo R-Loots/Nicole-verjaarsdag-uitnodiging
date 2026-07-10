@@ -26,7 +26,7 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 
     position: fixed;
     bottom: 0;
@@ -34,8 +34,12 @@ p{
     width: 100%;
 }
 
-.footer a {
-    color: rgb(255, 0, 0);
+.footer-container a {
+    color: rgba(179, 179, 179, 0.911);
     text-decoration: none;
     font-size: 18px;
+}
+
+.footer-container a:hover {
+    color: rgb(255, 0, 0);
 }
