@@ -60,18 +60,18 @@ function linkCell(url) {
 function render() {
   let html = "<table style='width:100%; border-collapse: collapse;'><tr>";
   ["Author", "Book Name", "Book Number", "Takealot", "Readers Warehouse", "Exclusive Books", "Purchased"]
-    .forEach(h => { html += `<th style="border: 1px solid #000000; padding: 10px; background-color: #3f0a0a; color: white;">${h}</th>`; });
+    .forEach(h => { html += `<th style="border: 1px solid #f3eeee; padding: 10px; background-color: #000000; color: white;">${h}</th>`; });
   html += "</tr>";
 
   books.forEach(b => {
     html += `<tr>
-      <td style="border: 1px solid #790000; padding: 10px; text-align: center;">${b.author}</td>
-      <td style="border: 1px solid #790000; padding: 10px; text-align: center;">${b.title}</td>
-      <td style="border: 1px solid #790000; padding: 10px; text-align: center;">${b.number}</td>
-      <td style="border: 1px solid #790000; padding: 10px; text-align: center;">${linkCell(b.takealot)}</td>
-      <td style="border: 1px solid #790000; padding: 10px; text-align: center;">${linkCell(b.readersWarehouse)}</td>
-      <td style="border: 1px solid #790000; padding: 10px; text-align: center;">${linkCell(b.exclusiveBooks)}</td>
-      <td style="border: 1px solid #790000; padding: 10px; text-align: center;">
+      <td style="border: 1px solid rgb(255, 248, 248); padding: 10px; text-align: center; color: #ffffff;">${b.author}</td>
+      <td style="border: 1px solid #ffffff; padding: 10px; text-align: center; color: #ffffff;">${b.title}</td>
+      <td style="border: 1px solid #ffffff; padding: 10px; text-align: center; color: #ffffff;">${b.number}</td>
+      <td style="border: 1px solid #ffffff; padding: 10px; text-align: center;">${linkCell(b.takealot)}</td>
+      <td style="border: 1px solid #ffffff; padding: 10px; text-align: center;">${linkCell(b.readersWarehouse)}</td>
+      <td style="border: 1px solid #ffffff; padding: 10px; text-align: center;">${linkCell(b.exclusiveBooks)}</td>
+      <td style="border: 1px solid #ffffff; padding: 10px; text-align: center;">
         <input type="checkbox" class="purchased-checkbox" data-id="${b.id}" />
       </td>
     </tr>`;
