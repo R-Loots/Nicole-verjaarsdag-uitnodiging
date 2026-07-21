@@ -66,11 +66,11 @@ function render() {
     html += `<tr>
       <td style="border: 1px solid #ffffff; padding: 10px; text-align: center; color: #ffffff;">${b.author}</td>
       <td style="border: 1px solid #ffffff; padding: 10px; text-align: center; color: #ffffff;">${b.title}</td>
-      <td style="border: 1px solid #ffffff; padding: 10px; text-align: center; color: #ffffff;">${b.number}</td>
-      <td style="border: 1px solid #ffffff; padding: 10px; text-align: center;">${linkCell(b.takealot)}</td>
-      <td style="border: 1px solid #ffffff; padding: 10px; text-align: center;">${linkCell(b.readersWarehouse)}</td>
-      <td style="border: 1px solid #ffffff; padding: 10px; text-align: center;">${linkCell(b.exclusiveBooks)}</td>
-      <td style="border: 1px solid #ffffff; padding: 10px; text-align: center;">
+      <td style="border: 1px solid #ffffff; padding: 10px; text-align: center; color: #ffffff;;">${b.number}</td>
+      <td style="border: 1px solid #ffffff; padding: 10px; text-align: center;;">${linkCell(b.takealot)}</td>
+      <td style="border: 1px solid #ffffff; padding: 10px; text-align: center; ;">${linkCell(b.readersWarehouse)}</td>
+      <td style="border: 1px solid #ffffff; padding: 10px; text-align: center; ;">${linkCell(b.exclusiveBooks)}</td>
+      <td style="border: 1px solid #ffffff; padding: 10px; text-align: center; ;">
         <input type="checkbox" class="purchased-checkbox" data-id="${b.id}" />
       </td>
     </tr>`;
