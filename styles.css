@@ -45,9 +45,11 @@ p{
 
 .RSVP-page #rsvp-form {
     position: absolute;
-    top: 50%;
+    top: 48vh;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
 }
 
 .footer-container {
