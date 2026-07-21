@@ -45,7 +45,6 @@ const books = [
   { author: "Navessa Allen", title: "Game On", number: "Book 3", takealot: "https://www.takealot.com/game-on/PLID98041495", readersWarehouse: "-", exclusiveBooks: "https://exclusivebooks.co.za/products/9781529442458?_pos=1&_sid=383d87f05&_ss=r" }
 ];
 
-// Turn "Author + Title + Number" into a safe, stable Firebase key
 function slugify(str) {
   return str.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
@@ -58,14 +57,14 @@ function linkCell(url) {
 }
 
 function render() {
-  let html = "<table style='width:100%; border-collapse: collapse;'><tr>";
+  let html = "<table style='border-collapse: collapse; margin: 0 auto;'><tr>";
   ["Author", "Book Name", "Book Number", "Takealot", "Readers Warehouse", "Exclusive Books", "Purchased"]
     .forEach(h => { html += `<th style="border: 1px solid #f3eeee; padding: 10px; background-color: #000000; color: white;">${h}</th>`; });
   html += "</tr>";
 
   books.forEach(b => {
     html += `<tr>
-      <td style="border: 1px solid rgb(255, 248, 248); padding: 10px; text-align: center; color: #ffffff;">${b.author}</td>
+      <td style="border: 1px solid #ffffff; padding: 10px; text-align: center; color: #ffffff;">${b.author}</td>
       <td style="border: 1px solid #ffffff; padding: 10px; text-align: center; color: #ffffff;">${b.title}</td>
       <td style="border: 1px solid #ffffff; padding: 10px; text-align: center; color: #ffffff;">${b.number}</td>
       <td style="border: 1px solid #ffffff; padding: 10px; text-align: center;">${linkCell(b.takealot)}</td>
@@ -87,7 +86,6 @@ function attachCheckboxListeners() {
   document.querySelectorAll(".purchased-checkbox").forEach(box => {
     const id = box.dataset.id;
 
-    // Live updates: reflects taps from any other visitor immediately
     db.ref("purchased/" + id).on("value", snapshot => {
       const purchased = snapshot.val() === true;
       box.checked = purchased;
