@@ -18,9 +18,14 @@ body.wishlist-page{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: stretch;
     text-align: center;
     padding: 20px 12px 90px;
+    box-sizing: border-box;
+}
+
+#wishlist-table {
+    width: 100%;
     box-sizing: border-box;
 }
 
