@@ -45,7 +45,7 @@ p{
 
 .RSVP-page #rsvp-form {
     position: absolute;
-    top: 48vh;
+    top: 55vh;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
